@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>5-Day Meal Planner</h1>
+        <div class="input-section">
+            <textarea id="groceryList" placeholder="Enter your groceries and vegetables (one per line)"></textarea>
+            <input type="email" id="userEmail" placeholder="Enter your email">
+            <button onclick="generateMealPlan()">Generate Meal Plan</button>
+        </div>
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            Generating your meal plan...
+        </div>
+        <div id="mealPlanDisplay" class="meal-plan-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
