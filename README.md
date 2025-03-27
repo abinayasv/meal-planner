@@ -89,7 +89,6 @@ npm start
 🔹 **Backend:** Node.js, Express.js  
 🔹 **AI Integration:** AWS Bedrock  
 🔹 **Notifications:** Amazon SNS  
-🔹 **Email Service:** Nodemailer  
 🔹 **Security:** `.env` variables for credentials  
 
 ---
