@@ -1,111 +1,115 @@
-# 5-Day Meal Planner
+Here’s a revised version of your **5-Day Meal Planner** project description, tailored to your code:  
 
-A web application that generates personalized 5-day meal plans based on available groceries using AWS Bedrock for AI-powered meal suggestions.
+---
 
-## Features
+# **5-Day AI-Powered Meal Planner**  
 
-- Input grocery list and email address
-- Generate 5-day meal plans with breakfast, lunch, and dinner
-- Detailed cooking instructions for each meal
-- Email delivery of meal plans
-- Responsive and clean user interface
+A web application that generates **personalized 5-day meal plans** based on available groceries. It utilizes **AWS Bedrock** for AI-generated meal suggestions and **Amazon SNS** to send meal plans via email.  
 
-## Prerequisites
+## **✨ Features**  
+✅ **User Inputs Grocery List** 📋  
+✅ **Generates 5-Day Meal Plan** 🥗🍲  
+✅ **Step-by-Step Cooking Instructions** 🍳  
+✅ **Nutritional Information & Dietary Suitability** 🏋️‍♂️  
+✅ **Preparation Time & YouTube Recipe Links** 🎥  
+✅ **Responsive UI with Meal Images** 🖼️  
+✅ **Email Delivery via AWS SNS** 📩  
 
-- Node.js (v14 or higher)
-- AWS Account with Bedrock access
-- Gmail account for sending emails
+---
 
-## Installation
+## **📌 Prerequisites**  
+✔ **Node.js (v14 or higher)**  
+✔ **AWS Account with Bedrock & SNS access**  
+✔ **Gmail Account for Sending Emails**  
 
-1. Clone the repository:
-```bash
+---
+
+## **🚀 Installation**  
+
+### **1️⃣ Clone the Repository**  
+```sh
 git clone <repository-url>
 cd meal-planner
 ```
 
-2. Install dependencies:
-```bash
+### **2️⃣ Install Dependencies**  
+```sh
 npm install
 ```
 
-3. Configure environment variables:
-- Copy `.env.example` to `.env`
-- Update the following variables in `.env`:
-  - `AWS_REGION`: Your AWS region
-  - `AWS_ACCESS_KEY_ID`: Your AWS access key
-  - `AWS_SECRET_ACCESS_KEY`: Your AWS secret key
-  - `EMAIL_USER`: Your Gmail address
-  - `EMAIL_PASS`: Your Gmail app password
+### **3️⃣ Configure Environment Variables**  
+- Copy `.env.example` → `.env`  
+- Update `.env` with:  
+  ```env
+  AWS_REGION=your-region
+  AWS_ACCESS_KEY_ID=your-access-key
+  AWS_SECRET_ACCESS_KEY=your-secret-key
+  SNS_TOPIC_ARN=your-sns-topic-arn
 
-## Getting Gmail App Password
+---
 
-1. Go to your Google Account settings
-2. Navigate to Security
-3. Enable 2-Step Verification if not already enabled
-4. Go to App passwords
-5. Generate a new app password for your application
-6. Use this password in your .env file
+## **☁ AWS Configuration**  
 
-## AWS Bedrock Setup
+### **🔹 Bedrock Setup**  
+- Enable **AWS Bedrock**  
+- Create **IAM User** with Bedrock Access  
+- Add **Access Keys** to `.env`  
 
-1. Create an AWS account if you don't have one
-2. Enable AWS Bedrock service
-3. Create an IAM user with Bedrock access
-4. Generate access keys and add them to your .env file
+### **🔹 SNS Setup (Amazon Simple Notification Service)**  
+1. **Create an SNS Topic**  
+2. **Subscribe your Email to SNS**  
+3. **Verify Email (Check your inbox)**  
+4. **Copy the SNS Topic ARN** → Add to `.env`  
 
-## Running the Application
+---
 
-1. Start the server:
-```bash
+## **🚀 Running the Application**  
+
+### **Start the Server**  
+```sh
 npm start
 ```
 
-2. Open your browser and navigate to:
-```
-http://localhost:3000
-```
+### **Access the Web App**  
+🔗 Open in Browser:  
+👉 `http://localhost:3000`  
 
-## Usage
+---
 
-1. Enter your available groceries in the textarea
-2. Provide your email address
-3. Click "Generate Meal Plan"
-4. View the generated meal plan on the webpage
-5. Check your email for a copy of the meal plan
+## **💻 Usage Instructions**  
+1️⃣ **Enter Grocery List** in the input box  
+2️⃣ **Click "Generate Meal Plan"** to fetch AI-generated results  
+3️⃣ **View detailed meal plan** (meals, steps, nutrients, etc.)  
+4️⃣ **Receive an Email** with the full meal plan  
 
-## Technical Stack
+---
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express.js
-- AI: AWS Bedrock
-- Email: Nodemailer
-- Security: Environment variables for sensitive data
+## **⚙️ Tech Stack**  
+🔹 **Frontend:** HTML, CSS, JavaScript  
+🔹 **Backend:** Node.js, Express.js  
+🔹 **AI Integration:** AWS Bedrock  
+🔹 **Notifications:** Amazon SNS  
+🔹 **Email Service:** Nodemailer  
+🔹 **Security:** `.env` variables for credentials  
 
-## Project Structure
+---
 
+## **📂 Project Structure**  
 ```
 meal-planner/
 ├── public/
-│   ├── index.html
-│   ├── styles.css
-│   └── script.js
-├── server.js
-├── .env
-└── README.md
+│   ├── index.html    # Frontend UI
+│   ├── styles.css    # Styling (Responsive)
+│   ├── script.js     # Client-side Logic
+├── server.js         # Backend (Express + AWS API)
+├── .env              # Environment Variables
+├── README.md         # Project Documentation
 ```
 
-## Security Notes
+---
 
-- Never commit your .env file
-- Use environment variables for sensitive data
-- Keep your AWS credentials secure
-- Use app-specific passwords for Gmail
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+## **🛡️ Security Notes**  
+❌ **Never commit `.env` file**  
+✅ **Use environment variables for sensitive data**  
+🔒 **Secure AWS Credentials**  
+🔐 **Use App Passwords for Gmail**  
