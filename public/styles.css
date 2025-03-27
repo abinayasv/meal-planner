@@ -1,92 +1,84 @@
+/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    max-width: 700px;
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+    font-size: 26px;
     color: #333;
 }
 
-.input-section {
-    margin-bottom: 20px;
-}
-
+/* Text Area */
 textarea {
     width: 100%;
     height: 150px;
-    margin-bottom: 10px;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
+/* Generate Button */
 button {
-    display: block;
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 12px;
+    background: #ff7eb3;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background: #ff527c;
 }
 
-.loading-spinner {
-    text-align: center;
-    margin: 20px 0;
-    color: #666;
-}
-
-.meal-plan-container {
+/* Meal Plan Result Boxes */
+.meal-plan {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
 }
 
-.day-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
+.meal-box {
+    background: #ffffff;
+    border-left: 6px solid #ff7eb3;
     padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.meal-type {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-}
-
-.meal-type h3 {
+.meal-box h2 {
+    font-size: 18px;
+    color: #ff527c;
     margin: 0;
-    color: #333;
+    margin-bottom: 8px;
 }
 
-.cooking-steps {
-    margin-top: 10px;
-    padding-left: 20px;
+.meal-box p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
 }
